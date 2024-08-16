@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class App {
+    public static void main(String[] args) throws Exception {
+
+        Scanner scanner = new Scanner(System.in);
+
+        int litros;
+        char tipo;
+        float preco = 0;
+
+        System.out.println("DIGITE O TIPO DE COMBUSTIVEL QUE VOCÊ QUER, 1 PARA GASOLINA E 2 PARA ALCOOL ");
+        tipo = scanner.next().charAt(0);
+        System.out.printf("QUANTOS LITROS?");
+        litros = scanner.nextInt();
+
+        if (tipo == '1') {
+            if (litros <= 20) {
+                preco = (float) (litros * 5.67);
+                preco = (float) (preco * 0.03);
+            }else{
+                preco = (float) (litros * 5.67);
+                preco = (float) (preco * 0.05);
+            }
+        } else if (tipo == '2') {
+            if (litros <= 20) {
+                preco = (float) (litros * 4.85);
+                preco = (float) (preco * 0.04);
+            }else{
+                preco = (float) (litros * 4.85);
+                preco = (float) (preco * 0.06);
+            }
+        }
+        System.out.println("PREÇO TOTAL:" + preco);
+    }
+    
+}
