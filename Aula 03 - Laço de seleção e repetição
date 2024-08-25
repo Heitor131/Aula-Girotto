@@ -33,5 +33,7 @@ public class App {
         }
         System.out.println("PREÇO TOTAL:" + preco);
     }
+
+    System.out.println("Ola, sou novo , linux")
     
 }
